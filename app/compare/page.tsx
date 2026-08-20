@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import {Suspense} from "react";
 
 type College = {
   id: string;
@@ -29,7 +30,7 @@ type College = {
   }[];
 };
 
-export default function ComparePage() {
+ function CompareContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -323,4 +324,12 @@ function ComparisonRow({
       </div>
     </div>
   );
+}
+
+export default function ComparePage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <CompareContent />
+        </Suspense>
+    );
 }
