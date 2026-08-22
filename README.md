@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CampusCompare
 
-## Getting Started
+CampusCompare is a full-stack web application that helps students compare colleges based on important factors such as courses, location, fees, and other available information.
 
-First, run the development server:
+The goal of this project is to provide students with a simple platform where they can explore and compare different colleges before making a decision.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search and explore colleges
+- Compare multiple colleges
+- View college details
+- Filter colleges based on available criteria
+- Responsive user interface
+- REST API for backend operations
+- Database integration for storing college information
+- Clean and user-friendly interface
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-## Learn More
+### Backend
+- Next.js API Routes / Backend APIs
+- TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+### Database
+- Prisma ORM
+- Database for storing college information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application follows a full-stack architecture:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+User
+  ↓
+Frontend (Next.js + React)
+  ↓
+API Routes
+  ↓
+Prisma ORM
+  ↓
+Database
